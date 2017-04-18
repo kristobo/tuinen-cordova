@@ -10,6 +10,7 @@ Add android SDK for mac
 -----------------------
 chown -R $USER /usr/local
 brew install android-sdk
+android sdk (and accept license)
 
 
 Run project
