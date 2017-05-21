@@ -128,6 +128,7 @@ export var TaskDetailComponent = (function () {
     TaskDetailComponent.prototype.updateProgress = function (value) {
         var _this = this;
         this.loading = true;
+        this.message = "";
         if (value == 100) {
             this.paused = true;
             this.updateStatus(TaskStatus.Afgewerkt);
