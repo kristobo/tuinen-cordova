@@ -108,7 +108,7 @@ export var TaskDetailComponent = (function () {
                     }
                     else {
                         _this.loading = false;
-                        _this.message = "U bevindt zich niet binnen 200m van het adres (" + distance + ")";
+                        _this.message = "U bevindt zich niet binnen 200m van het adres (" + distance + " km)";
                     }
                 }, function (error) {
                     _this.message = error;
