@@ -3,14 +3,33 @@
 .task-detail{
   font-weight:300;
 
+  .inner-wrapper{
+    margin-top:30px;
+    background-color: rgba(0, 0, 0, 0.24);
+    padding: 15px 30px;
+  }
+
   .detail-header{
-    margin: 30px -.75rem;
+    margin: 0px -.75rem 30px;
 
 
     .intro{
+
       .name{
         font-size:1.6em;
+
+        &:first-letter {
+          text-transform: uppercase;
+        }
+
       }
+
+      .category{
+        &:first-letter {
+          text-transform: uppercase;
+        }
+      }
+
       .adress{
         font-size:1.2em;
       }
@@ -33,6 +52,7 @@
       background: transparent;
       border: 1px solid #fff;
       color: #fff;
+      padding:8px;
 
       width:48%;
       float:left;
@@ -51,9 +71,125 @@
         color: rgba(0, 0, 0, 0.24);
       }
 
+      span{
+        vertical-align:middle;
+      }
+
+      .material-icons{
+        vertical-align: middle;
+      }
+
     }
+  }
+
+  .range-field{
+    margin-top: 35px;
+    margin-bottom: 30px;
+
+    input[type=range]{
+      margin-top:20px;
+      border: none;
+    }
+
+    input[type=range]::-webkit-slider-thumb{
+      background-color: $title_bg;
+    }
+    input[type=range]::-moz-range-thumb{
+      background-color: $title_bg;
+    }
+    input[type=range]::-ms-thumb{
+      background-color: $title_bg;
+    }
+
+    /***** These are to edit the thumb and the text inside the thumb *****/
+    input[type=range] + .thumb {
+      background-color: $title_bg;
+
+    }
+
+    input[type=range] + .thumb.active{
+      margin-top: -15px;
+    }
+
   }
 
 }
 
+.detail-item{
+  font-size:13px;
 
+  span{
+    display: inline-block;
+    width: 100px;
+  }
+}
+
+
+/* Range */
+
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background-color: #26a69a;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  margin: -10px 0 0 0;
+  transition: .3s;
+}
+
+
+input[type=range]::-moz-range-thumb {
+  border: none;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: #26a69a;
+  margin-top: -5px;
+}
+
+input[type=range]:-moz-focusring {
+  outline: 1px solid #fff;
+  outline-offset: -1px;
+}
+
+input[type=range]:focus::-moz-range-track {
+  background: #ccc;
+}
+
+input[type=range]::-ms-track {
+  height: 3px;
+  background: transparent;
+  border-color: transparent;
+  border-width: 6px 0;
+  /*remove default tick marks*/
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #777;
+}
+
+
+input[type=range]::-ms-fill-upper {
+  background: #ddd;
+}
+
+input[type=range]::-ms-thumb {
+  border: none;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: #26a69a;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #888;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #ccc;
+}

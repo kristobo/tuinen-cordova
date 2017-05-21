@@ -4,6 +4,9 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
+    </feature>
     <name>TuinenApp</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -20,5 +23,11 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <allow-intent href="market:*" />
+    <icon density="ldpi" src="res/android-chrome-36x36.png" />
+    <icon density="mdpi" src="res/android-chrome-48x48.png" />
+    <icon density="hdpi" src="res/android-chrome-72x72.png" />
+    <icon density="xhdpi" src="res/android-chrome-96x96.png" />
+    <icon density="xxhdpi" src="res/android-chrome-144x144.png" />
+    <icon density="xxxhdpi" src="res/android-chrome-192x192.png" />
     <preference name="loglevel" value="DEBUG" />
 </widget>

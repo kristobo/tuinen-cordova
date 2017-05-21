@@ -1,0 +1,40 @@
+/* List row */
+
+.material-item{
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.24);
+  padding: 8px 16px;
+  margin-bottom: 8px;
+  min-height: 53px;
+
+  @include display-flex();
+  @include flex-direction(row);
+  @include align-items(center);
+
+  .icon{
+    width: 32px;
+    padding: 8px 0px;
+    cursor: pointer;
+  }
+
+  a{
+    color:#ffffff;
+  }
+
+  .content{
+    width: 100%;
+
+
+    @include flex-direction(column);
+
+    .title{
+      &:first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+  }
+}
+
+
+
